@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <title>Conference ticket generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="form-section">
+      <img src="logo-full.svg" width="100px" />
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+      <form id="ticket-form">
+        <div class="form-item">
+          <label>Upload Avatar</label>
+          <label class="drop-area">
+            <img src="icon-upload.svg" alt="">
+            <p>Click to upload</p>
+            <input type="file" name="file" required>
+          </label>
+        </div>
+        <label>Full Name
+          <input id="fullNameInput" required />
+        </label>
+        <label>Email Address
+          <input id="emailInput" placeholder="example@email.com" required />
+        </label>
+        <label>GitHub Username
+          <input id="githubInput" placeholder="@yourusername" required />
+        </label>
+      </form>
+      <button id="generateBtn">Generate My Ticket</button>
+      <img src="pattern-squiggly-line-bottom-desktop.svg" class="bottomPattern" />
+    </div>
+
+    <div class="ticket-section">
+      <div class="ticket-header">
+        <img src="logo-full.svg" width="100px" />
+        <h1>Congrats, <span class="outputName"></span> Your ticket is ready.</h1>
+        <p>We've emailed your ticket to <span class="outputEmail"></span> and will send updates in the run up to the
+          event.
+        </p>
+      </div>
+      <div class="ticketCard">
+        <img class="logoSmall" src="logo-mark.svg" width="20px" />
+        <p>Coding Conf</p>
+        <div class="eventInfo">
+          <p>Jan 31, 2025 / Austin, TX</p>
+          <h5 class="ticketNumber">#12087</h5>
+        </div>
+        <div class="userProfile">
+          <img class="userAvatar" src="" alt="" />
+          <div class="userInfo">
+            <h3 class="outputName2"></h3>
+            <div class="githubWrapper">
+              <img src="icon-github.svg" alt="" />
+              <p class="outputGithub"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="index.html" class="backBtn">back</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
